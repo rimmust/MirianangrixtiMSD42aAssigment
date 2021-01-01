@@ -7,6 +7,8 @@ public class EnemyPathing : MonoBehaviour
     [SerializeField] List<Transform> waypoints; //to move the waypoints 
     [SerializeField] float obstacleMoveSpeed = 2f;
 
+    [SerializeField] WaveConfigObstc waveConfig; //link them together
+
     //update to next waypoint
     int waypointIndex = 0;
 
@@ -14,6 +16,9 @@ public class EnemyPathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets the way point in paths and return  them in this varible
+        waypoints = waveConfig.GetWaypoints();
+
         //the obstcacle start on waypoint 0
         transform.position = waypoints[waypointIndex].transform.position;
     }

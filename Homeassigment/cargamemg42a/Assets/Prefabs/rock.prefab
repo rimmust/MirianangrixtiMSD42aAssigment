@@ -99,3 +99,5 @@ MonoBehaviour:
   - {fileID: 224031465180755604, guid: d0403535c0ac42b42aeea723cc5d2ef5, type: 3}
   - {fileID: 2059777142835597519, guid: 2a10bb0077097974681c04ae5ad0a60c, type: 3}
   - {fileID: 5731185411821105917, guid: 5cb8035379b3e8d4f8bc4e5b9505f350, type: 3}
+  obstacleMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 16cd05d5aa2930847998af58c062fd47, type: 2}
