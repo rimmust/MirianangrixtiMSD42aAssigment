@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints; //to move the waypoints 
-    [SerializeField] float obstacleMoveSpeed = 2f;
+    //[SerializeField] float obstacleMoveSpeed = 2f;
 
     [SerializeField] WaveConfigObstc waveConfig; //link them together
 
@@ -38,7 +38,8 @@ public class EnemyPathing : MonoBehaviour
 
             targetPosition.z = 0f; //to set the z position to 0
 
-            var obstacleMovement = obstacleMoveSpeed * Time.deltaTime;
+            //get the movement speed from the wave
+            var obstacleMovement = waveConfig.GetObstcaleMoveSpeed() * Time.deltaTime;
 
             // obsctale move from curent positon to positon at obsctacleMovementSpeed
            transform.position= Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
@@ -52,7 +53,17 @@ public class EnemyPathing : MonoBehaviour
 
         else
         {
-            Destroy(gameObject);
+            //arrange something in here to make the enimes move down after the player
+            Destroy(gameObject); 
         }
+
+       
     }
+
+    // do the waveconfig to set 
+        public void SetWaveConfig(WaveConfigObstc waveConSet)
+    {
+        waveConfig = waveConSet;
+    }
+
 }
