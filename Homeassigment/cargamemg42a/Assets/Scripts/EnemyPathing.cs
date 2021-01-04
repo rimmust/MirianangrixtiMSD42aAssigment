@@ -54,7 +54,8 @@ public class EnemyPathing : MonoBehaviour
         else
         {
             //arrange something in here to make the enimes move down after the player
-            Destroy(gameObject); 
+          Destroy(gameObject); 
+           
         }
 
        

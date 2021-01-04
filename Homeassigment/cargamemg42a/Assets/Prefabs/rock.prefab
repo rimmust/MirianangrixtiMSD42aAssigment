@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3765072777733130272}
   - component: {fileID: 3765072777733130275}
   - component: {fileID: 4347382677390674068}
+  - component: {fileID: -407689638070992514}
+  - component: {fileID: -9145855312564547993}
   m_Layer: 0
   m_Name: rock
   m_TagString: Untagged
@@ -99,5 +101,34 @@ MonoBehaviour:
   - {fileID: 224031465180755604, guid: d0403535c0ac42b42aeea723cc5d2ef5, type: 3}
   - {fileID: 2059777142835597519, guid: 2a10bb0077097974681c04ae5ad0a60c, type: 3}
   - {fileID: 5731185411821105917, guid: 5cb8035379b3e8d4f8bc4e5b9505f350, type: 3}
-  obstacleMoveSpeed: 2
   waveConfig: {fileID: 11400000, guid: 16cd05d5aa2930847998af58c062fd47, type: 2}
+--- !u!114 &-407689638070992514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765072777733130274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0575a32180f112e468a7f3efda5325c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 6543855168092491311, guid: 1d0d5f0c92f5dd1469808bf32ac493ef, type: 3}
+  laserSpeed: 5
+--- !u!114 &-9145855312564547993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765072777733130274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629b0cd2f9c19fc4f800bf385d2149ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

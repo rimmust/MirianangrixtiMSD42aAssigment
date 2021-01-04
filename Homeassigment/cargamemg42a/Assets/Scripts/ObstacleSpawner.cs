@@ -6,7 +6,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     //choose whic waay the obstacle spawn
     [SerializeField] List<WaveConfigObstc> waveConfigList;
-    
+
     //to loop everytime starts
     [SerializeField] bool looping = false;
 
@@ -16,7 +16,7 @@ public class ObstacleSpawner : MonoBehaviour
 
 
     // Start is called before the first frame update
-     IEnumerator Start()  //the start will become a coututine to loop 
+    IEnumerator Start()  //the start will become a coututine to loop 
     {
         do
         {
@@ -25,7 +25,7 @@ public class ObstacleSpawner : MonoBehaviour
             yield return StartCoroutine(SpawnAllWaves());
         }
         // then it will continue  until the courutine finishes
-        while (looping ); 
+        while (looping);
 
     }
 
