@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1204974019939577534}
   - component: {fileID: 828329223712160586}
   - component: {fileID: 3894447358302292477}
+  - component: {fileID: 1600949448012222053}
   m_Layer: 0
   m_Name: cargreen
   m_TagString: Untagged
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!114 &1600949448012222053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699909694499403409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629b0cd2f9c19fc4f800bf385d2149ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3

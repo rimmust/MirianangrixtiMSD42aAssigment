@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7019016413250809289}
   - component: {fileID: 2568495392479485897}
   - component: {fileID: 1522468628390399007}
+  - component: {fileID: -3640589885305389349}
   m_Layer: 0
   m_Name: trunck
   m_TagString: Untagged
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!114 &-3640589885305389349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580493677811532279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629b0cd2f9c19fc4f800bf385d2149ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2

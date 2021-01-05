@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.5f;
     float xMin, xMax, yMin, yMax;
 
-    //[SerializeField] float health = 50f;
+   // [SerializeField] float health = 50f;
 
 
     // Start is called before the first frame update
@@ -31,27 +31,27 @@ public class Player : MonoBehaviour
     //reduce the heath if obstacle bullets collide with player
     //which has dameage dealer 
 
-  //  private void OnTriggerEnter2D(Collider2D otherObject)
-  //  {
+  // private void OnTriggerEnter2D(Collider2D otherObject)
+ // {
         //go in damage dealer class 
         //reduce the health accordingly
    //     DamgeDealer dmgDealer = otherObject.gameObject.GetComponent<DamgeDealer>();
 
- //       ProcesHit(dmgDealer);
- //   }
+  //      ProcesHit(dmgDealer);
+ //  }
 
     //ifit is called ,damageDealer details
 
-  //  private void ProcesHit(DamgeDealer dmgDealer)
-  //  {
-  //      health -= DamgeDealer.GetDamage();
+ // private void ProcesHit(DamgeDealer dmgDealer)
+ //   {
+        //health -= DamgeDealer.GetDamage();
 
-  //      if (health <=0)
-   //     {
-    //        Destroy(gameObject);
-    //    }
+    //    if (health <=0)
+    //   {
+     //      Destroy(gameObject);
+     //   }
             
- //   }
+    //}
     private void SetUpMoveBoundaries()
     {
         // save the main camera in varibles

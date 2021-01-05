@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7675719098334784274}
   - component: {fileID: 4681603111565714720}
   - component: {fileID: -4067274062378375085}
+  - component: {fileID: 8366904927651817243}
+  - component: {fileID: -3692407439492374616}
   m_Layer: 0
   m_Name: bollar
   m_TagString: Untagged
@@ -97,3 +99,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!114 &8366904927651817243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390879655500898390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629b0cd2f9c19fc4f800bf385d2149ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!114 &-3692407439492374616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390879655500898390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0575a32180f112e468a7f3efda5325c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 6543855168092491311, guid: 1d0d5f0c92f5dd1469808bf32ac493ef, type: 3}
+  laserSpeed: 6
