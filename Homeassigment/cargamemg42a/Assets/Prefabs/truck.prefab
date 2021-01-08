@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
+  obstacleMoveSpeed: 2
   waveConfig: {fileID: 0}
 --- !u!70 &-3630416859762159209
 CapsuleCollider2D:

@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] GameObject obstacleLaserPrefab;
 
-    [SerializeField] float laserSpeed = 0.4f;
+   [SerializeField] float laserSpeed = 0.4f;
 
 
     // Start is called before the first frame update
@@ -56,8 +56,5 @@ public class Obstacle : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D otherObject)
-    {
-        print("collision with" + otherObject.gameObject.name);
-    }
+    
 }

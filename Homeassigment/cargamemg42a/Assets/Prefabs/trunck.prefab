@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
+  obstacleMoveSpeed: 2
   waveConfig: {fileID: 0}
 --- !u!114 &-3640589885305389349
 MonoBehaviour:
