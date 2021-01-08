@@ -54,6 +54,10 @@ public class Obstacle : MonoBehaviour
 
         obstacleLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
 
+    }
 
+    private void OnCollisionEnter2D(Collision2D otherObject)
+    {
+        print("collision with" + otherObject.gameObject.name);
     }
 }

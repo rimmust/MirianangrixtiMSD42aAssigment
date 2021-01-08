@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 828329223712160586}
   - component: {fileID: 3894447358302292477}
   - component: {fileID: 1600949448012222053}
+  - component: {fileID: -6220413374497839639}
   m_Layer: 0
   m_Name: cargreen
   m_TagString: Untagged
@@ -111,3 +112,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!70 &-6220413374497839639
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699909694499403409}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5, y: 5}
+  m_Direction: 0
