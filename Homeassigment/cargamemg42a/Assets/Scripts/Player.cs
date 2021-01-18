@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
     float xMin, xMax, yMin, yMax;
-
     [SerializeField] float health = 50f;
+
 
 
     // Start is called before the first frame update
@@ -37,7 +37,18 @@ public class Player : MonoBehaviour
         //reduce the health accordingly
         DamgeDealer dmgDealer = otherObject.gameObject.GetComponent<DamgeDealer>();
 
-     ProcesHit(dmgDealer);
+        
+        //if they object doesn not have a damgdelaer ignore it
+        if(!dmgDealer) //if dmgdealer is 
+        {
+            return;
+        }
+
+       
+
+        ProcesHit(dmgDealer);
+
+        
    }
 
     //ifit is called ,damageDealer details

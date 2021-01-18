@@ -13,6 +13,8 @@ public class Obstacle : MonoBehaviour
     [SerializeField] GameObject obstacleLaserPrefab;
 
    [SerializeField] float laserSpeed = 0.4f;
+    
+   
 
 
     // Start is called before the first frame update
@@ -31,6 +33,8 @@ public class Obstacle : MonoBehaviour
         CountDownAndShoot();
 
     }
+  
+
 
     private void CountDownAndShoot()
     {

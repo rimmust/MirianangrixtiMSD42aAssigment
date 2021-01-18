@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8854696534357931307}
   - component: {fileID: 8854696534357931304}
   - component: {fileID: 8854696534357931306}
-  - component: {fileID: 2936402016520470986}
-  m_Layer: 0
+  - component: {fileID: -3705697852589027219}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.5
   health: 50
---- !u!60 &2936402016520470986
+--- !u!60 &-3705697852589027219
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
