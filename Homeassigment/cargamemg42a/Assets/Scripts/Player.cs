@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,12 +52,12 @@ public class Player : MonoBehaviour
             return;
         }
 
-       
-
         ProcesHit(dmgDealer);
-
+        GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuartion);
         
-   }
+
+    }
 
     //ifit is called ,damageDealer details
 private void ProcesHit(DamgeDealer dmgDealer)
@@ -78,6 +80,9 @@ private void ProcesHit(DamgeDealer dmgDealer)
         GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         //destory after 1 sec
         Destroy(explosion, explosionDuartion);
+
+        //load the gameover scene as the player losses
+        FindObjectOfType<Level>().GameOver();
     }
 
     private void SetUpMoveBoundaries()
