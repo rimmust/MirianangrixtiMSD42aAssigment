@@ -12,6 +12,12 @@ public class Player : MonoBehaviour
     float xMin, xMax, yMin, yMax;
     [SerializeField] float health = 50f;
 
+    //to call the explosion
+    [SerializeField] GameObject explosionVfx;
+
+    //how long it wil reamin in sceen
+    [SerializeField] float explosionDuartion = 1f;
+
 
 
     // Start is called before the first frame update
@@ -57,11 +63,23 @@ private void ProcesHit(DamgeDealer dmgDealer)
        health -= dmgDealer.GetDamage();
 
        if (health <=0)
-      {
+        {
+            Die();
+        }
+
+    }
+
+    private void Die()
+    {
+        //destroy player
         Destroy(gameObject);
-      }
-            
-  }
+
+        //get the explosion effects instanisten na explosion in player and dave it in this varible 
+        GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
+        //destory after 1 sec
+        Destroy(explosion, explosionDuartion);
+    }
+
     private void SetUpMoveBoundaries()
     {
         // save the main camera in varibles

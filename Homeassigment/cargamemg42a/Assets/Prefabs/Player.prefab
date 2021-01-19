@@ -99,6 +99,8 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.5
   health: 50
+  explosionVfx: {fileID: 7932606294264603833, guid: 860b5bd8d8549f24ca6449a92e73dacd, type: 3}
+  explosionDuartion: 1
 --- !u!60 &-3705697852589027219
 PolygonCollider2D:
   m_ObjectHideFlags: 0
