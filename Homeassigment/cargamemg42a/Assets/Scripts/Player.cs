@@ -87,6 +87,7 @@ private void ProcesHit(DamgeDealer dmgDealer)
        if (health <=0)
         {
             Die();
+            
         }
 
     }
@@ -103,7 +104,7 @@ private void ProcesHit(DamgeDealer dmgDealer)
         //music when the player dies
         //play sound at the camera position at he volume
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
-       
+
         //load the gameover scene as the player losses
         FindObjectOfType<Level>().GameOver();
     }

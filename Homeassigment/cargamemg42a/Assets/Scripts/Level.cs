@@ -26,8 +26,7 @@ public class Level : MonoBehaviour
         //load the scene of the game
         SceneManager.LoadScene("CarGame");
 
-        //if the game starts agian reset the game session from the beggining
-       // FindObjectOfType<GameSession>().ResetGame();
+        
     }
 
     public void GameOver()

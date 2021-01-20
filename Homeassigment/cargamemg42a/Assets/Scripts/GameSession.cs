@@ -44,6 +44,8 @@ public class GameSession : MonoBehaviour
         score += scoreValue;
     }
 
+  
+
 
     //to reset the game 
     public void ResetGame()

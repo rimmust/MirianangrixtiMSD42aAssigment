@@ -14,7 +14,6 @@ public class ObstacleDestroyer : MonoBehaviour
             print("WINNER");
         }
     }
-
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         //destroy the obstacle as they go down after the palyer
