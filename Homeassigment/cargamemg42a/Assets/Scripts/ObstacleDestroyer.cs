@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class ObstacleDestroyer : MonoBehaviour
 {
+    [SerializeField] int ScoreValue = 5;
+
+
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         //destroy the obstacle as they go down after the palyer
         Destroy(otherObject.gameObject);
+
+        //add score to gamesession score
+        FindObjectOfType<GameSession>().AddToScore(ScoreValue);
+
+        
     }
 }

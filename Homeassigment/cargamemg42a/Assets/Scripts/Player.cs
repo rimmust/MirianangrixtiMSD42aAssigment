@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
+
     // the speed the player move
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
@@ -18,8 +18,13 @@ public class Player : MonoBehaviour
     //how long it wil reamin in sceen
     [SerializeField] float explosionDuartion = 1f;
 
+    //music
+    // [SerializeField] AudioClip playerDeathSound;
+    //we can change the sound from a bar
+    // [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
-
+   // [SerializeField] AudioClip playerTouchedSound;
+   // [SerializeField] [Range(0, 1)] float playerTouchedSoundVolume = 0.25f;
 
 
     // Start is called before the first frame update
@@ -55,6 +60,10 @@ public class Player : MonoBehaviour
         ProcesHit(dmgDealer);
         GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         Destroy(explosion, explosionDuartion);
+
+        //music when the player is hit
+       // AudioSource.PlayClipAtPoint(playerTouchedSound, Camera.main.transform.position, playerTouchedSoundVolume);
+
         
 
     }
@@ -80,6 +89,10 @@ private void ProcesHit(DamgeDealer dmgDealer)
         GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         //destory after 1 sec
         Destroy(explosion, explosionDuartion);
+
+        //music when the player dies
+        //play sound at the camera position at he volume
+        //AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
 
         //load the gameover scene as the player losses
         FindObjectOfType<Level>().GameOver();

@@ -13,6 +13,8 @@ public class Obstacle : MonoBehaviour
     [SerializeField] GameObject obstacleLaserPrefab;
 
    [SerializeField] float laserSpeed = 0.4f;
+
+    
     
    
 
@@ -57,6 +59,8 @@ public class Obstacle : MonoBehaviour
         GameObject obstacleLaser = Instantiate(obstacleLaserPrefab, transform.position, Quaternion.identity) as GameObject;
 
         obstacleLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+
+        
 
     }
 

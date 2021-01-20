@@ -31,7 +31,7 @@ public class EnemyPathing : MonoBehaviour
 
     private void obstacleMove()
     {
-        if (waypointIndex <= waypoints.Count -1)
+        if (waypointIndex <= waypoints.Count - 1)
         {
             // to get  tragetpositon to the next waypoint that we whant to go
             var targetPosition = waypoints[waypointIndex].transform.position;
@@ -42,7 +42,7 @@ public class EnemyPathing : MonoBehaviour
             var obstacleMovement = waveConfig.GetObstcaleMoveSpeed() * Time.deltaTime;
 
             // obsctale move from curent positon to positon at obsctacleMovementSpeed
-           transform.position= Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
 
             // to check  target position
             if (transform.position == targetPosition)
@@ -54,8 +54,8 @@ public class EnemyPathing : MonoBehaviour
         else
         {
             //arrange something in here to make the enimes move down after the player
-          Destroy(gameObject); 
-           
+            Destroy(gameObject);
+
         }
 
        
