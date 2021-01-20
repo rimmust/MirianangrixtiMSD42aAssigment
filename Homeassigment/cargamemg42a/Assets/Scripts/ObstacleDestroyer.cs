@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObstacleDestroyer : MonoBehaviour
 {
     [SerializeField] int ScoreValue = 5;
@@ -10,7 +11,7 @@ public class ObstacleDestroyer : MonoBehaviour
     {
         if (ScoreValue <= 100)
         {
-            print("hello");
+            print("WINNER");
         }
     }
 

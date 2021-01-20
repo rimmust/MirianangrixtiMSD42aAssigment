@@ -63,7 +63,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        //DamgeDealer dmgDealer = otherObject.gameObject.GetComponent<DamgeDealer>();
+       
 
         
         Destroy(gameObject);

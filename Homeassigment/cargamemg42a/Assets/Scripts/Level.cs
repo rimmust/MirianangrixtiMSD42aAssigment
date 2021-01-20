@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
     //delat to amke the gameoversben apperar to 2 seconds
     [SerializeField] float delayInSeconds = 2f;
 
+  
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(delayInSeconds);
@@ -41,7 +42,10 @@ public class Level : MonoBehaviour
         //load the scene if player loses
         SceneManager.LoadScene("Winner");
 
+
     }
+
+    
 
     public void QuitGame()
     {
