@@ -6,6 +6,13 @@ public class ObstacleDestroyer : MonoBehaviour
 {
     [SerializeField] int ScoreValue = 5;
 
+    public void ShowWinner()
+    {
+        if (ScoreValue <= 100)
+        {
+            print("hello");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
@@ -15,6 +22,12 @@ public class ObstacleDestroyer : MonoBehaviour
         //add score to gamesession score
         FindObjectOfType<GameSession>().AddToScore(ScoreValue);
 
-        
+      
     }
+
+   
+      
 }
+
+
+

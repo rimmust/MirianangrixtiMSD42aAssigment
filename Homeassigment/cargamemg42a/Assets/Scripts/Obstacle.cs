@@ -14,9 +14,8 @@ public class Obstacle : MonoBehaviour
 
    [SerializeField] float laserSpeed = 0.4f;
 
-    
-    
    
+
 
 
     // Start is called before the first frame update
@@ -59,10 +58,21 @@ public class Obstacle : MonoBehaviour
         GameObject obstacleLaser = Instantiate(obstacleLaserPrefab, transform.position, Quaternion.identity) as GameObject;
 
         obstacleLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        //DamgeDealer dmgDealer = otherObject.gameObject.GetComponent<DamgeDealer>();
 
         
+        Destroy(gameObject);
 
     }
 
-    
+
+
+
+
+
 }

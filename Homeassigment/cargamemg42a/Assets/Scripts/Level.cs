@@ -26,7 +26,7 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene("CarGame");
 
         //if the game starts agian reset the game session from the beggining
-        FindObjectOfType<GameSession>().ResetGame();
+       // FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void GameOver()
@@ -40,6 +40,7 @@ public class Level : MonoBehaviour
     {
         //load the scene if player loses
         SceneManager.LoadScene("Winner");
+
     }
 
     public void QuitGame()

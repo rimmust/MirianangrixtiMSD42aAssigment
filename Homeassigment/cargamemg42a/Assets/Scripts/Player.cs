@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
     float xMin, xMax, yMin, yMax;
-    [SerializeField] float health = 50f;
+    [SerializeField] int health = 50;
 
     //to call the explosion
     [SerializeField] GameObject explosionVfx;
@@ -18,13 +18,14 @@ public class Player : MonoBehaviour
     //how long it wil reamin in sceen
     [SerializeField] float explosionDuartion = 1f;
 
-    //music
-    // [SerializeField] AudioClip playerDeathSound;
-    //we can change the sound from a bar
-    // [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
-   // [SerializeField] AudioClip playerTouchedSound;
-   // [SerializeField] [Range(0, 1)] float playerTouchedSoundVolume = 0.25f;
+    //music
+    [SerializeField] AudioClip playerDeathSound;
+    //we can change the sound from a bar
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
+   [SerializeField] AudioClip playerTouchedSound;
+    [SerializeField] [Range(0, 1)] float playerTouchedSoundVolume = 0.25f;
 
 
     // Start is called before the first frame update
@@ -41,30 +42,40 @@ public class Player : MonoBehaviour
         Pmove();  
     }
 
+    //player health
+    public int GetHealth()
+    {
+        //this retursn the value of healthof player
+        return health;
+    }
+
     //reduce the heath if obstacle bullets collide with player
     //which has dameage dealer 
 
-   private void OnTriggerEnter2D(Collider2D otherObject)
-  {
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
         //go in damage dealer class 
         //reduce the health accordingly
         DamgeDealer dmgDealer = otherObject.gameObject.GetComponent<DamgeDealer>();
 
-        
+
         //if they object doesn not have a damgdelaer ignore it
-        if(!dmgDealer) //if dmgdealer is 
+        if (!dmgDealer) //if dmgdealer is 
         {
             return;
+
         }
+        
 
         ProcesHit(dmgDealer);
         GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         Destroy(explosion, explosionDuartion);
+       
 
         //music when the player is hit
-       // AudioSource.PlayClipAtPoint(playerTouchedSound, Camera.main.transform.position, playerTouchedSoundVolume);
+         AudioSource.PlayClipAtPoint(playerTouchedSound, Camera.main.transform.position, playerTouchedSoundVolume);
 
-        
+
 
     }
 
@@ -84,16 +95,15 @@ private void ProcesHit(DamgeDealer dmgDealer)
     {
         //destroy player
         Destroy(gameObject);
-
+       
         //get the explosion effects instanisten na explosion in player and dave it in this varible 
         GameObject explosion = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         //destory after 1 sec
         Destroy(explosion, explosionDuartion);
-
         //music when the player dies
         //play sound at the camera position at he volume
-        //AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
-
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+       
         //load the gameover scene as the player losses
         FindObjectOfType<Level>().GameOver();
     }
@@ -134,4 +144,7 @@ private void ProcesHit(DamgeDealer dmgDealer)
       
 
        }
+
+
+    
 }

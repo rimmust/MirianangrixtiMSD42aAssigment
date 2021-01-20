@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -421548112829821138}
   - component: {fileID: -488582426082056808}
   - component: {fileID: 1377848715246551511}
+  - component: {fileID: 9205975592048567893}
   m_Layer: 9
   m_Name: bollar
   m_TagString: Untagged
@@ -147,6 +148,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   obstacleLaserPrefab: {fileID: 6543855168092491311, guid: 1d0d5f0c92f5dd1469808bf32ac493ef, type: 3}
   laserSpeed: 5
+  obstacleSound: {fileID: 8300000, guid: 16a2494b0ff7b314cabc9a6be1a03c04, type: 3}
+  obstacleSoundVolume: 0.75
 --- !u!60 &1377848715246551511
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -226,3 +229,24 @@ PolygonCollider2D:
       - {x: 0.29999998, y: -0.11}
       - {x: 0.14999999, y: -0.12}
       - {x: 0.14, y: -0.11}
+--- !u!50 &9205975592048567893
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390879655500898390}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

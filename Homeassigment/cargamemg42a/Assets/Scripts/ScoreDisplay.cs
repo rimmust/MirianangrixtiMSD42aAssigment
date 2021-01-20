@@ -25,4 +25,7 @@ public class ScoreDisplay : MonoBehaviour
         //updae the text 
         scoreText.text = gameSession.GetScore().ToString();
     }
+
+    
+
 }
